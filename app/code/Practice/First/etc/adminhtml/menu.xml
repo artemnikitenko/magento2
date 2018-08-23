@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Practice_First::helloworld" title="Hello World" module="Practice_First" sortOrder="51"
+             resource="Practice_First::helloworld"/>
+        <add id="Practice_First::post" title="Manage Posts" module="Practice_First" sortOrder="10"
+             parent="Practice_First::helloworld" action="practice_first/post/index" resource="Practice_First::post"/>
+        <add id="Practice_First::hello_configuration" title="Configuration" module="Practice_First" sortOrder="99"
+             parent="Practice_First::helloworld" action="adminhtml/system_config/edit/section/helloworld"
+             resource="Practice_First::helloworld_configuration"/>
+    </menu>
+</config>
