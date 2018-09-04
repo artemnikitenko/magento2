@@ -1,5 +1,16 @@
 <?php
-$message = $this->getHelloWorld()
+/**
+ * @var Practice\Dev\Block\Test $this
+ */
+$postCollection = $this->getPostData();
+
+foreach ($postCollection as $item) {
+    echo '<tr>
+            <td>'.$item->getPostId().'</td>
+            <td>'.$item->getName().'</td>
+            <td>'.$item->getPostContent().'</td>
+          </tr><br>';
+
+}
 ?>
 
-<h2><?php echo $message ?></h2>

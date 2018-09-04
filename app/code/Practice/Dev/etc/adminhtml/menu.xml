@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Practice_Dev::dev" title="Practice Dev" module="Practice_Dev"
+             sortOrder="51" resource="Practice_Dev::dev"/>
+        <add id="Practice_Dev::post" title="Manage Posts" module="Practice_Dev"
+             sortOrder="10" action="practice_dev/post" resource="Practice_Dev::post"
+             parent="Practice_Dev::dev"/>
+        <add id="Practice_Dev::dev_configuration" title="Configuration" module="Practice_Dev"
+             sortOrder="99"  action="adminhtml/system_config/edit/section/dev"
+             resource="Practice_Dev::dev_configuration" parent="Practice_Dev::dev"/>
+    </menu>
+</config>
