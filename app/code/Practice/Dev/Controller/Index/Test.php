@@ -12,6 +12,7 @@ class Test extends Action
 {
     protected $_pageFactory;
     protected $_postFactory;
+    protected $title;
 
     public function __construct(Context $context, PageFactory $pageFactory, PostFactory $_postFactory)
     {
@@ -21,8 +22,20 @@ class Test extends Action
         parent::__construct($context);
     }
 
+    public function setTitle($title)
+    {
+        return $this->title = $title;
+    }
+
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
     public function execute()
     {
-        return $this->_pageFactory->create();
+        echo $this->setTitle('Welcome');
+        echo $this->getTitle();
+//        return $this->_pageFactory->create();
     }
 }

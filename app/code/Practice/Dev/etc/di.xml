@@ -12,4 +12,7 @@
             <argument name="resourceModel" xsi:type="string">Practice\Dev\Model\ResourceModel\Post</argument>
         </arguments>
     </virtualType>
+    <type name="Practice\Dev\Controller\Index\Example">
+        <plugin name="Practice_Dev_Plugin" type="Practice\Dev\Plugin\DevPlugin" sortOrder="10" disabled="false"  />
+    </type>
 </config>
