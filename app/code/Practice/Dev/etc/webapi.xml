@@ -1,0 +1,62 @@
+<routes	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route	url="/V1/practiceSliderSlide/:slideId" method="GET">
+        <service class="Practice\Dev\Api\SlideRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="Practice_Dev::slide"/>
+        </resources>
+    </route>
+    <route url="/V1/practiceSliderSlide/search" method="GET">
+        <service class="Practice\Dev\Api\SlideRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/practiceSliderSlide" method="POST">
+        <service class="Practice\Dev\Api\SlideRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Practice_Dev::slide_save"/>
+        </resources>
+    </route>
+    <route url="/V1/practiceSliderSlide/:id" method="PUT">
+        <service class="Practice\Dev\Api\SlideRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Practice_Dev::slide_save"/>
+        </resources>
+    </route>
+    <route url="/V1/practiceSliderSlide/:slideId" method="DELETE">
+        <service class="Practice\Dev\Api\SlideRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Practice_Dev::slide_delete"/>
+        </resources>
+    </route>
+    <route url="/V1/practiceSliderImage/:imageId" method="GET">
+        <service class="Practice\Dev\Api\ImageRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="Practice_Dev::image"/>
+        </resources>
+    </route>
+    <route url="/V1/practiceSliderImage/search"	method="GET">
+        <service class="Practice\Dev\Api\ImageRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Practice_Dev::image"/>
+        </resources>
+    </route>
+    <route url="/V1/practiceSliderImage" method="POST">
+        <service class="Practice\Dev\Api\ImageRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Practice_Dev::image_save"/>
+        </resources>
+    </route>
+    <route url="/V1/practiceSliderImage/:id" method="PUT">
+        <service class="Practice\Dev\Api\ImageRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Practice_Dev::image_save"/>
+        </resources>
+    </route>
+    <route url="/V1/practiceSliderImage/:imageId" method="DELETE">
+        <service class="Practice\Dev\Api\ImageRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Practice_Dev::image_delete"/>
+        </resources>
+    </route>
+</routes>

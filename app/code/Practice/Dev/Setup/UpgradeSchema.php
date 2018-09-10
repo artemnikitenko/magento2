@@ -13,6 +13,10 @@ class UpgradeSchema implements UpgradeSchemaInterface
         if(version_compare($context->getVersion(), '1.0.1', '<')) {
             $this->_createPostTable($setup);
         }
+
+        if(version_compare($context->getVersion(), '1.0.2', '<')) {
+            $this->_createSlideTable($setup);
+        }
     }
 
     private function _createPostTable(SchemaSetupInterface $setup)
@@ -102,6 +106,35 @@ class UpgradeSchema implements UpgradeSchemaInterface
                 ['name','url_key','post_content','tags','featured_image'],
                 \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
             );
+        }
+        $installer->endSetup();
+    }
+
+    private function _createSlideTable(SchemaSetupInterface $setup)
+    {
+        $installer = $setup;
+
+        $installer->startSetup();
+
+        if (!$installer->tableExists('practice_dev_slide')) {
+            $table = $installer->getConnection()->newTable($installer->getTable('practice_dev_slide'))
+                ->addColumn(
+                    'slide_id',
+                    \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+                    null,
+                    ['identity'	=>	true,	'unsigned'	=>	true,	'nullable'	=>
+                        false,	'primary'	=>	true],
+                    'Slide	Id'
+                )
+                ->addColumn(
+                    'title',
+                    \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                    200,
+                    [],
+                    'Title'
+                )
+                ->setComment('Slide table');
+            $installer->getConnection()->createTable($table);
         }
         $installer->endSetup();
     }

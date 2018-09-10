@@ -3,6 +3,20 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::content">
+                    <resource id="Magento_Backend::content_elements">
+                        <resource id="Practice_Dev::slider" title="Slider" sortOrder="10">
+                            <resource id="Practice_Dev::slide" title="Slider Slide"	sortOrder="10">
+                                <resource id="Practice_Dev::slide_save"	title="Save	Slide" sortOrder="10"/>
+                                <resource id="Practice_Dev::slide_delete" title="Delete Slide" sortOrder="20"/>
+                            </resource>
+                            <resource id="Practice_Dev::image" title="Slider Image"	sortOrder="10">
+                                <resource id="Practice_Dev::image_save"	title="Save	Image"	sortOrder="10"/>
+                                <resource id="Practice_Dev::image_delete" title="Delete	Image"	sortOrder="20"	/>
+                            </resource>
+                        </resource>
+                    </resource>
+                </resource>
                 <resource id="Practice_Dev::dev" title="Practice Dev" sortOrder="51">
                     <resource id="Practice_Dev::post" title="Posts" sortOrder="10"/>
                     <resource id="Practice_Dev::dev_configuration" title="Configuration" sortOrder="99" />

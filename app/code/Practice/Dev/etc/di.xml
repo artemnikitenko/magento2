@@ -23,4 +23,6 @@
             <argument name="practice_dev_helper_data" xsi:type="object">Practice\Dev\Helper\Data</argument>
         </arguments>
     </type>
+    <preference	for="Practice\Dev\Api\Data\SlideInterface" type="Practice\Dev\Model\Slide"/>
+    <preference	for="Practice\Dev\Api\SlideRepositoryInterface" type="Practice\Dev\Model\SlideRepository"/>
 </config>
