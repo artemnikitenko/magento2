@@ -5,13 +5,12 @@
                 <active>1</active>
                 <sallowspecific>0</sallowspecific>
                 <model>Practice\Dev\Model\Carrier\Example</model>
-                <name>Inchoo Example Shipping</name>
+                <name>Dev Example Shipping</name>
                 <price>15.00</price>
-                <title>Inchoo Example</title>
+                <title>Dev Example</title>
                 <type>I</type>
                 <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
             </example>
         </carriers>
-    </default>
     </default>
 </config>

@@ -4,14 +4,21 @@ namespace Practice\Model\Carrier;
 
 use Magento\Quote\Model\Quote\Address\RateRequest;
 use Magento\Shipping\Model\Rate\Result;
+use \Magento\Shipping\Model\Carrier\AbstractCarrier;
+use \Magento\Shipping\Model\Carrier\CarrierInterface;
+use \Magento\Framework\App\Config\ScopeConfigInterface;
+use \Magento\Quote\Model\Quote\Address\RateResult\ErrorFactory;
+use \Psr\Log\LoggerInterface;
+use \Magento\Shipping\Model\Rate\ResultFactory;
+use \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory;
 
-class Example extends \Magento\Shipping\Model\Carrier\AbstractCarrier implements
-    \Magento\Shipping\Model\Carrier\CarrierInterface
+class Example extends AbstractCarrier implements CarrierInterface
 {
-    /**
-     * @var string
-     */
+
     protected $_code = 'example';
+    protected $_isFixed = true;
+    protected $_rateResultFactory;
+    protected $_rateMethodFactory;
 
     /**
      * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
@@ -22,11 +29,11 @@ class Example extends \Magento\Shipping\Model\Carrier\AbstractCarrier implements
      * @param array $data
      */
     public function __construct(
-        \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
-        \Magento\Quote\Model\Quote\Address\RateResult\ErrorFactory $rateErrorFactory,
-        \Psr\Log\LoggerInterface $logger,
-        \Magento\Shipping\Model\Rate\ResultFactory $rateResultFactory,
-        \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory $rateMethodFactory,
+        ScopeConfigInterface $scopeConfig,
+        ErrorFactory $rateErrorFactory,
+        LoggerInterface $logger,
+        ResultFactory $rateResultFactory,
+        MethodFactory $rateMethodFactory,
         array $data = []
     ) {
         $this->_rateResultFactory = $rateResultFactory;
