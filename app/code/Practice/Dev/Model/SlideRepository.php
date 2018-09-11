@@ -10,11 +10,11 @@ use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Exception\CouldNotDeleteException;
 
-use \Practice\Dev\Model\SlideFactory;
 use \Practice\Dev\Api\Data\SlideInterface;
-use \Practice\Dev\Model\ResourceModel\Slide;
 use \Practice\Dev\Api\SlideRepositoryInterface;
 use \Practice\Dev\Api\Data\SlideInterfaceFactory;
+use \Practice\Dev\Model\SlideFactory;
+use \Practice\Dev\Model\ResourceModel\Slide;
 use \Practice\Dev\Model\ResourceModel\Slide\CollectionFactory;
 
 class SlideRepository implements SlideRepositoryInterface
@@ -86,7 +86,7 @@ class SlideRepository implements SlideRepositoryInterface
     {
         try {
             $this->resource->save($slide);
-        } catch (\Exception    $exception) {
+        } catch (\Exception $exception) {
             throw new CouldNotSaveException(__($exception->getMessage()));
         }
         return $slide;
@@ -155,7 +155,7 @@ class SlideRepository implements SlideRepositoryInterface
         $slide = $this->slideFactory->create();
         $this->resource->load($slide, $slideId);
         if (!$slide->getId()) {
-            throw new NoSuchEntityException(__('Slide with id	%1 does	not	exist.', $slideId));
+            throw new NoSuchEntityException(__('Slide with id %1 does	not	exist.', $slideId));
         }
         return $slide;
     }
@@ -184,7 +184,7 @@ class SlideRepository implements SlideRepositoryInterface
     {
         try {
             $this->resource->delete($slide);
-        } catch (\Exception    $exception) {
+        } catch (\Exception $exception) {
             throw new CouldNotDeleteException(__($exception->getMessage()));
         }
         return true;

@@ -5,11 +5,11 @@ namespace Practice\Dev\Api\Data;
 /**
  * @api
  */
-interface    SlideInterface
+interface SlideInterface
 {
-    const    PROPERTY_ID = 'slide_id';
-    const    PROPERTY_SLIDE_ID = 'slide_id';
-    const    PROPERTY_TITLE = 'title';
+    const PROPERTY_ID = 'slide_id';
+    const PROPERTY_SLIDE_ID = 'slide_id';
+    const PROPERTY_TITLE = 'title';
 
     /**
      * Get Slide entity 'slide_id' property value
