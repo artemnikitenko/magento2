@@ -1,16 +1,16 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
         <carriers>
-            <example>
+            <shipbox>
                 <active>1</active>
                 <sallowspecific>0</sallowspecific>
-                <model>Practice\Dev\Model\Carrier\Example</model>
+                <model>Practice\Dev\Model\Carrier\Shipbox</model>
                 <name>Dev Example Shipping</name>
                 <price>15.00</price>
                 <title>Dev Example</title>
                 <type>I</type>
                 <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
-            </example>
+            </shipbox>
         </carriers>
     </default>
 </config>

@@ -12,10 +12,10 @@ use \Psr\Log\LoggerInterface;
 use \Magento\Shipping\Model\Rate\ResultFactory;
 use \Magento\Quote\Model\Quote\Address\RateResult\MethodFactory;
 
-class Example extends AbstractCarrier implements CarrierInterface
+class Shipbox extends AbstractCarrier implements CarrierInterface
 {
 
-    protected $_code = 'example';
+    protected $_code = 'shipbox';
     protected $_isFixed = true;
     protected $_rateResultFactory;
     protected $_rateMethodFactory;
@@ -46,7 +46,7 @@ class Example extends AbstractCarrier implements CarrierInterface
      */
     public function getAllowedMethods()
     {
-        return ['example' => $this->getConfigData('name')];
+        return ['shipbox' => $this->getConfigData('name')];
     }
 
     /**
@@ -65,10 +65,10 @@ class Example extends AbstractCarrier implements CarrierInterface
         /** @var \Magento\Quote\Model\Quote\Address\RateResult\Method $method */
         $method = $this->_rateMethodFactory->create();
 
-        $method->setCarrier('example');
+        $method->setCarrier('shipbox');
         $method->setCarrierTitle($this->getConfigData('title'));
 
-        $method->setMethod('example');
+        $method->setMethod('shipbox');
         $method->setMethodTitle($this->getConfigData('name'));
 
         /*you can fetch shipping price from different sources over some APIs, we used price from config.xml - xml node price*/
