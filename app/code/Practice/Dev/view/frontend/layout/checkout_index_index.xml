@@ -1,0 +1,10 @@
+<item name="dev-offline-payments" xsi:type="array">
+    <item name="component" xsi:type="string">
+        Practice_Dev/js/view/payment/dev-offline-payments</item>
+    <item name="methods" xsi:type="array">
+        <item name="paybox" xsi:type="array">
+            <item name="isBillingAddressRequired"
+                  xsi:type="boolean">true</item>
+        </item>
+    </item>
+</item>

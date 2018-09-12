@@ -13,5 +13,14 @@
                 <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
             </shipbox>
         </carriers>
+        <payment>
+            <paybox>
+                <active>1</active>
+                <model>Practice\Dev\Model\Paybox</model><order_status>pending</order_status>
+                <title>Dev Paybox</title>
+                <allowspecific>0</allowspecific>
+                <group>offline</group>
+            </paybox>
+        </payment>
     </default>
 </config>
