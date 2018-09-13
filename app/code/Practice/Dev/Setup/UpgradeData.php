@@ -32,6 +32,10 @@ class UpgradeData implements UpgradeDataInterface
             $this->_addCustomProductType($setup);
         }
 
+        if (version_compare($context->getVersion(), '1.0.4') < 0) {
+            $this->_addCustomProductAttribute($setup);
+        }
+
         $setup->endSetup();
     }
 
@@ -65,5 +69,21 @@ class UpgradeData implements UpgradeDataInterface
                 );
             }
         }
+    }
+
+    private function _addCustomProductAttribute(ModuleDataSetupInterface $setup)
+    {
+        $eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
+
+        $eavSetup->addAttribute(\Magento\Catalog\Model\Product::ENTITY, 'features', [
+            'type' => 'text',
+            'label' => 'Features',
+            'input' => 'textarea',
+            'required' => false,
+            'sort_order' => 100,
+            'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_STORE,
+            'wysiwyg_enabled' => true,
+            'is_html_allowed_on_front' => true,
+        ]);
     }
 }

@@ -25,4 +25,7 @@
     </type>
     <preference	for="Practice\Dev\Api\Data\SlideInterface" type="Practice\Dev\Model\Slide"/>
     <preference	for="Practice\Dev\Api\SlideRepositoryInterface" type="Practice\Dev\Model\SlideRepository"/>
+    <!--<type name="Magento\Catalog\Api\ProductRepositoryInterface">-->
+        <!--<plugin name="get_product_features" type="Practice\Dev\Plugin\ProductGet"/>-->
+    <!--</type>-->
 </config>
