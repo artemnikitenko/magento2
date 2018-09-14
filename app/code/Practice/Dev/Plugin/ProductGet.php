@@ -35,10 +35,7 @@ class ProductGet
             $product->setExtensionAttributes($productExtension);
         }
 
-        // Fetch the raw product model (I have not found a better way), and set the data onto our attribute.
-        $productModel = $this->productFactory->create()->load($product->getId());
-        $product->getExtensionAttributes()
-            ->setFeatures($productModel->getData('name'));
+        $product->getExtensionAttributes()->setFeatures($product->getData('name'));
 
         return $product;
     }
