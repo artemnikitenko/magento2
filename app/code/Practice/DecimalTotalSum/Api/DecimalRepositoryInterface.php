@@ -13,7 +13,6 @@ interface DecimalRepositoryInterface
      * Save slide.
      * @param \Practice\DecimalTotalSum\Api\Data\DecimalInterface $decimal
      * @return \Practice\DecimalTotalSum\Api\Data\DecimalInterface
-     * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function save(DecimalInterface $decimal);
 }
