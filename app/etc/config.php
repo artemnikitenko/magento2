@@ -142,6 +142,7 @@ return [
         'Dotdigitalgroup_Email' => 1,
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistSampleData' => 1,
+        'Practice_DecimalTotalSum' => 1,
         'Practice_Dev' => 1,
         'Practice_First' => 1,
         'Shopial_Facebook' => 1,
