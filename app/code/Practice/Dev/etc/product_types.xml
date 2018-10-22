@@ -1,7 +1,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Catalog:etc/product_types.xsd">
     <type name="devdailydeal" label="Daily Deal" modelInstance="Practice\Dev\Model\Product\Type\DailyDeal"
           composite="false" isQty="true" canUseQtyDecimals="false">
-        <priceModel instance="Practice\Dev\Model \Product\Price"/>
+        <priceModel instance="Practice\Dev\Model\Product\Price"/>
         <indexerModel instance="Practice\Dev\Model\ResourceModel\Indexer\Price"/>
         <stockIndexerModel instance="Practice\Dev\Model\ResourceModel\Indexer\Stock"/>
         <customAttributes>
