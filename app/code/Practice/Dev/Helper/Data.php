@@ -9,6 +9,6 @@ class Data extends AbstractHelper
 {
     public function getData()
     {
-        return "data from helper!";
+        return "!!!data from helper!!!";
     }
 }

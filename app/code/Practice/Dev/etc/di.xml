@@ -20,7 +20,7 @@
             <argument name="stringPost" xsi:type="array">
                 <item name="practice_dev_array_model_data" xsi:type="string">Practice\Dev\Model\Post</item>
             </argument>
-            <argument name="practice_dev_helper_data" xsi:type="object">Practice\Dev\Helper\Data</argument>
+            <argument name="helpData" xsi:type="object">Practice\Dev\Helper\Data</argument>
         </arguments>
     </type>
     <preference	for="Practice\Dev\Api\Data\SlideInterface" type="Practice\Dev\Model\Slide"/>
