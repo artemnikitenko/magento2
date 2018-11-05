@@ -146,6 +146,7 @@ return [
         'Practice_DecimalTotalSum' => 1,
         'Practice_Dev' => 1,
         'Practice_First' => 1,
+        'Practice_Mageplaza' => 1,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1
     ]
