@@ -26,6 +26,12 @@ interface WarehouseRepositoryInterface
     public function delete(WarehouseInterface $warehouse);
 
     /**
+     * @param $id
+     * @return void
+     */
+    public function deleteById($id);
+
+    /**
      * @param SearchCriteriaInterface $searchCriteria
      * @return mixed
      */
