@@ -6,6 +6,7 @@ use Magento\Framework\Api\SearchCriteriaInterface;
 use Practice\Mageplaza\Api\Data\WarehouseInterface;
 use Practice\Mageplaza\Api\WarehouseRepositoryInterface;
 use Practice\Mageplaza\Model\ResourceModel\Warehouse;
+use Practice\Mageplaza\Model\ResourceModel\Warehouse\CollectionFactory;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Exception\CouldNotDeleteException;
@@ -21,7 +22,7 @@ class WarehouseRepository implements WarehouseRepositoryInterface
     public function __construct(
         WarehouseFactory $warehouseFactory,
         Warehouse $warehouseResource,
-        WarehouseCollectionFactory $warehouseCollectionFactory,
+        CollectionFactory $warehouseCollectionFactory,
         WarehouseSearchResultInterfaceFactory $warehouseSearchResultInterfaceFactory
     )
     {

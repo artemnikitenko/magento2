@@ -1,6 +1,6 @@
 <?php
 
-namespace Practice\Mageplaza\Api;
+namespace Practice\Mageplaza\Api\Data;
 
 use Magento\Framework\Api\SearchResultsInterface;
 use Practice\Mageplaza\Api\Data\WarehouseInterface;

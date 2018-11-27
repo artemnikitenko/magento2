@@ -1,6 +1,6 @@
 <?php
 
-namespace Practice\Mageplaza\Model\ResourceModel\Collection;
+namespace Practice\Mageplaza\Model\ResourceModel\Warehouse;
 
 use Magento\Catalog\Model\ResourceModel\AbstractCollection;
 

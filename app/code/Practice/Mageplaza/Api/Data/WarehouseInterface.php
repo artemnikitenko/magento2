@@ -6,6 +6,16 @@ use Magento\Framework\Api\ExtensibleDataInterface;
 
 interface WarehouseInterface extends ExtensibleDataInterface
 {
+    const ID = 'id';
+    const TITLE = 'title';
+    const CODE = 'code';
+    const EMAIL = 'email';
+    const IMAGE = 'image';
+    const CITY_RU = 'city_ru';
+    const CITY_UA = 'city_ua';
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'updated_at';
+
     /**
      * @return mixed
      */
@@ -105,15 +115,15 @@ interface WarehouseInterface extends ExtensibleDataInterface
      */
     public function setUpdatedAt($updatedAt);
 
-    /**
-     * @return WarehouseExtensionInterface|null
-     */
-    public function getExtensionAttributes();
-
-    /**
-     * @param WarehouseExtensionInterface $extensionAttribute
-     * @return $this
-     */
-    public function setExtensionAttributes(WarehouseExtensionInterface $extensionAttribute);
+//    /**
+//     * @return WarehouseExtensionInterface|null
+//     */
+//    public function getExtensionAttributes();
+//
+//    /**
+//     * @param WarehouseExtensionInterface $extensionAttribute
+//     * @return $this
+//     */
+//    public function setExtensionAttributes(WarehouseExtensionInterface $extensionAttribute);
 
 }
