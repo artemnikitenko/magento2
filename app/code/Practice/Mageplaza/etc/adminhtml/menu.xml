@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Practice_Mageplaza::main" title="Practice Mageplaza" module="Practice_Mageplaza"
+             sortOrder="51" resource="Practice_Mageplaza::main"/>
+        <add id="Practice_Mageplaza::warehouse" title="Warehouse" module="Practice_Mageplaza"
+             sortOrder="10" action="practice_mageplaza/warehouse" resource="Practice_Mageplaza::warehouse"
+             parent="Practice_Mageplaza::main"/>
+    </menu>
+</config>

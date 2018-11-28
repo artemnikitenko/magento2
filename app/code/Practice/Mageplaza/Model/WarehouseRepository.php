@@ -3,13 +3,13 @@
 namespace Practice\Mageplaza\Model;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
-use Practice\Mageplaza\Api\Data\WarehouseInterface;
-use Practice\Mageplaza\Api\WarehouseRepositoryInterface;
-use Practice\Mageplaza\Model\ResourceModel\Warehouse;
-use Practice\Mageplaza\Model\ResourceModel\Warehouse\CollectionFactory;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Exception\CouldNotDeleteException;
+use Practice\Mageplaza\Api\Data\WarehouseInterface;
+use Practice\Mageplaza\Model\ResourceModel\Warehouse;
+use Practice\Mageplaza\Api\WarehouseRepositoryInterface;
+use Practice\Mageplaza\Model\ResourceModel\Warehouse\CollectionFactory;
 
 
 class WarehouseRepository implements WarehouseRepositoryInterface
@@ -65,7 +65,7 @@ class WarehouseRepository implements WarehouseRepositoryInterface
 
     /**
      * @param WarehouseInterface $warehouse
-     * @throws CouldNotDeleteExceptio
+     * @throws CouldNotDeleteException
      */
     public function delete(WarehouseInterface $warehouse)
     {
