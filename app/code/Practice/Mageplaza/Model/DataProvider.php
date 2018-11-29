@@ -31,6 +31,8 @@ class DataProvider extends AbstractDataProvider
         /** @var Warehouse $warehouse */
         foreach ($items as $warehouse) {
             $this->loadedData[$warehouse->getId()]['warehouse'] = $warehouse->getData();
+            $this->loadedData[$warehouse->getId()]['warehouse_city_ru'] = ['city_ru' => $warehouse->getData('city_ru')];
+            $this->loadedData[$warehouse->getId()]['warehouse_city_uk'] = ['city_uk' => $warehouse->getData('city_uk')];
         }
 
         return $this->loadedData;

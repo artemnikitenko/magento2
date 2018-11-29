@@ -20,6 +20,8 @@ class GenericButton
      */
     protected $registry;
 
+    protected $context;
+
     /**
      * Constructor
      *
@@ -32,6 +34,7 @@ class GenericButton
     ) {
         $this->urlBuilder = $context->getUrlBuilder();
         $this->registry = $registry;
+        $this->context = $context;
     }
 
     /**
@@ -42,7 +45,8 @@ class GenericButton
     public function getId()
     {
         $warehouse = $this->registry->registry('warehouse');
-        return $warehouse ? $warehouse->getId() : null;
+        $warehouse = $this->context->getRequest()->getParam('id');
+        return $warehouse ? $warehouse : null;
     }
 
     /**

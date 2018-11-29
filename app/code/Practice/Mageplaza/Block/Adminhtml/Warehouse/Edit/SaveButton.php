@@ -17,17 +17,17 @@ class SaveButton extends GenericButton implements ButtonProviderInterface
         return [
             'label' => __('Save Warehouse'),
             'class' => 'save primary',
-//            'data_attribute' => [
-//                'mage-init' => ['button' => ['event' => 'save']],
-//                'form-role' => 'save',
-//            ],
-            'on_click' => sprintf("location.href = '%s';", $this->getBackUrl()),
+            'data_attribute' => [
+                'mage-init' => ['button' => ['event' => 'save']],
+                'form-role' => 'save',
+            ],
+//            'on_click' => sprintf("location.href = '%s';", $this->getSaveUrl()),
             'sort_order' => 90,
         ];
     }
 
-    public function getBackUrl()
+    public function getSaveUrl()
     {
-        return $this->getUrl('*/*/save');
+        return $this->getUrl('*/*/edit');
     }
 }

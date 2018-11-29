@@ -13,7 +13,7 @@
 
         <item name="buttons" xsi:type="array">
             <item name="back" xsi:type="string">Practice\Mageplaza\Block\Adminhtml\Warehouse\Edit\BackButton</item>
-            <!--<item name="delete" xsi:type="string">Practice\Mageplaza\Block\Adminhtml\Warehouse\Edit\DeleteButton</item>-->
+            <item name="delete" xsi:type="string">Practice\Mageplaza\Block\Adminhtml\Warehouse\Edit\DeleteButton</item>
             <!--<item name="reset" xsi:type="string">Practice\Mageplaza\Block\Adminhtml\Warehouse\Edit\ResetButton</item>-->
             <item name="save" xsi:type="string">Practice\Mageplaza\Block\Adminhtml\Warehouse\Edit\SaveButton</item>
         </item>
@@ -31,6 +31,9 @@
                 <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
             </item>
         </argument>
+        <settings>
+            <submitUrl path="practice_mageplaza/warehouse/save"/>
+        </settings>
     </dataSource>
 
     <fieldset name="warehouse">
@@ -126,14 +129,14 @@
         </field>
 
     </fieldset>
-    <fieldset name="warehouse_locale_ua">
+    <fieldset name="warehouse_city_uk">
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
                 <item name="label" xsi:type="string" translate="true">City UA</item>
             </item>
         </argument>
 
-        <field name="city_ru">
+        <field name="city_uk">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="label" xsi:type="string">City UA</item>
@@ -146,7 +149,7 @@
         </field>
     </fieldset>
 
-    <fieldset name="warehouse_locale_ru">
+    <fieldset name="warehouse_city_ru">
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
                 <item name="label" xsi:type="string" translate="true">City RU</item>

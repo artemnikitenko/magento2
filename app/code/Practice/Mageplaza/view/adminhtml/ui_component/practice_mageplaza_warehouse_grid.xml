@@ -31,6 +31,21 @@
             </argument>
         </argument>
     </dataSource>
+    <listingToolbar name="listing_top">
+        <massaction name="listing_massaction">
+            <action name="delete">
+                <settings>
+                    <confirm>
+                        <message translate="true">Are you sure you want to delete selected items?</message>
+                        <title translate="true">Delete items</title>
+                    </confirm>
+                    <url path="practice_mageplaza/warehouse/massDelete"/>
+                    <type>delete</type>
+                    <label translate="true">Delete</label>
+                </settings>
+            </action>
+        </massaction>
+    </listingToolbar>
     <columns name="spinner_columns">
         <selectionsColumn name="ids">
             <argument name="data" xsi:type="array">
@@ -106,7 +121,7 @@
                 </item>
             </argument>
         </column>
-        <column name="city_ua">
+        <column name="city_uk">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>

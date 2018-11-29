@@ -2,23 +2,23 @@
 
 namespace Practice\Mageplaza\Controller\Adminhtml\Warehouse;
 
+use Practice\Mageplaza\Model\Warehouse;
 
 class Save extends Index
 {
 
-//    protected $resultPageFactory;
-//    protected $resultForwardFactory;
-//
-//    public function __construct(Context $context, PageFactory $resultPageFactory, ForwardFactory $resultForwardFactory)
-//    {
-//        parent::__construct($context);
-//        $this->resultPageFactory = $resultPageFactory;
-//        $this->resultForwardFactory = $resultForwardFactory;
-//    }
-
     public function execute()
     {
-        $originalRequestData = $this->getRequest();
-        return $this->resultForwardFactory->create()->forward('newaction');
+        $warehouseData = $this->getRequest()->getParam('warehouse');
+        $warehouseCityRu = $this->getRequest()->getParam('warehouse_city_ru');
+        $warehouseCityUA = $this->getRequest()->getParam('warehouse_city_uk');
+        $warehouseData['city_uk'] = $warehouseCityUA['city_uk'];
+        $warehouseData['city_ru'] = $warehouseCityRu['city_ru'];
+        if(is_array($warehouseData)) {
+            $warehouse = $this->_objectManager->create(Warehouse::class);
+            $warehouse->setData($warehouseData)->save();
+            $resultRedirect = $this->resultRedirectFactory->create();
+            return $resultRedirect->setPath('*/*/index');
+        }
     }
 }
