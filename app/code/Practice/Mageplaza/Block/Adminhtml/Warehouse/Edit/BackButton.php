@@ -7,7 +7,7 @@ use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 /**
  * Class SaveButton
  */
-class SaveButton extends GenericButton implements ButtonProviderInterface
+class BackButton extends GenericButton implements ButtonProviderInterface
 {
     /**
      * @return array
@@ -15,19 +15,20 @@ class SaveButton extends GenericButton implements ButtonProviderInterface
     public function getButtonData()
     {
         return [
-            'label' => __('Save Warehouse'),
-            'class' => 'save primary',
-//            'data_attribute' => [
-//                'mage-init' => ['button' => ['event' => 'save']],
-//                'form-role' => 'save',
-//            ],
+            'label' => __('Back'),
             'on_click' => sprintf("location.href = '%s';", $this->getBackUrl()),
-            'sort_order' => 90,
+            'class' => 'back',
+            'sort_order' => 10
         ];
     }
 
+    /**
+     * Get URL for back (reset) button
+     *
+     * @return string
+     */
     public function getBackUrl()
     {
-        return $this->getUrl('*/*/save');
+        return $this->getUrl('*/*/');
     }
 }

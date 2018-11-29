@@ -12,7 +12,7 @@
         </item>
 
         <item name="buttons" xsi:type="array">
-            <!--<item name="back" xsi:type="string">Practice\Mageplaza\Block\Adminhtml\Warehouse\Edit\BackButton</item>-->
+            <item name="back" xsi:type="string">Practice\Mageplaza\Block\Adminhtml\Warehouse\Edit\BackButton</item>
             <!--<item name="delete" xsi:type="string">Practice\Mageplaza\Block\Adminhtml\Warehouse\Edit\DeleteButton</item>-->
             <!--<item name="reset" xsi:type="string">Practice\Mageplaza\Block\Adminhtml\Warehouse\Edit\ResetButton</item>-->
             <item name="save" xsi:type="string">Practice\Mageplaza\Block\Adminhtml\Warehouse\Edit\SaveButton</item>
@@ -101,18 +101,6 @@
             </argument>
         </field>
 
-        <field name="city_ua">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="label" xsi:type="string">City UA</item>
-                    <item name="visible" xsi:type="boolean">true</item>
-                    <item name="dataType" xsi:type="string">text</item>
-                    <item name="formElement" xsi:type="string">input</item>
-                    <item name="source" xsi:type="string">warehouse</item>
-                </item>
-            </argument>
-        </field>
-
         <field name="created_at">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -138,23 +126,43 @@
         </field>
 
     </fieldset>
-    <!--<fieldset name="warehouse_locale">-->
-        <!--<argument name="data" xsi:type="array">-->
-            <!--<item name="config" xsi:type="array">-->
-                <!--<item name="label" xsi:type="string" translate="true">Sample Fieldset</item>-->
-            <!--</item>-->
-        <!--</argument>-->
+    <fieldset name="warehouse_locale_ua">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">City UA</item>
+            </item>
+        </argument>
 
-        <!--<field name="city_ru">-->
-            <!--<argument name="data" xsi:type="array">-->
-                <!--<item name="config" xsi:type="array">-->
-                    <!--<item name="label" xsi:type="string">City UA</item>-->
-                    <!--<item name="visible" xsi:type="boolean">true</item>-->
-                    <!--<item name="dataType" xsi:type="string">text</item>-->
-                    <!--<item name="formElement" xsi:type="string">input</item>-->
-                    <!--<item name="source" xsi:type="string">warehouse</item>-->
-                <!--</item>-->
-            <!--</argument>-->
-        <!--</field>-->
-    <!--</fieldset>-->
+        <field name="city_ru">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">City UA</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">warehouse</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+
+    <fieldset name="warehouse_locale_ru">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">City RU</item>
+            </item>
+        </argument>
+
+        <field name="city_ru">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string">City RU</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">warehouse</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
 </form>
