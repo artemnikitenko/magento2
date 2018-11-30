@@ -18,6 +18,5 @@ class Edit extends Index
             $resultRedirect = $this->resultRedirectFactory->create();
             return $resultRedirect->setPath('*/*/index');
         }
-//        return $this->resultForwardFactory->create()->forward('newaction');
     }
 }

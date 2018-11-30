@@ -12,4 +12,6 @@
             <argument name="resourceModel" xsi:type="string">Practice\Mageplaza\Model\ResourceModel\Warehouse</argument>
         </arguments>
     </virtualType>
+    <preference	for="Practice\Mageplaza\Api\Data\WarehouseInterface" type="Practice\Mageplaza\Model\Warehouse"/>
+    <preference	for="Practice\Mageplaza\Api\WarehouseRepositoryInterface" type="Practice\Mageplaza\Model\WarehouseRepository"/>
 </config>

@@ -2,7 +2,7 @@
 
 namespace Practice\Mageplaza\Block\Adminhtml\Warehouse\Edit;
 
-use Magento\Search\Controller\RegistryConstants;
+use \Magento\Backend\Block\Widget\Context;
 
 class GenericButton
 {
@@ -14,39 +14,29 @@ class GenericButton
     protected $urlBuilder;
 
     /**
-     * Registry
-     *
-     * @var \Magento\Framework\Registry
+     * @var Context
      */
-    protected $registry;
-
     protected $context;
 
     /**
      * Constructor
      *
      * @param \Magento\Backend\Block\Widget\Context $context
-     * @param \Magento\Framework\Registry $registry
      */
-    public function __construct(
-        \Magento\Backend\Block\Widget\Context $context,
-        \Magento\Framework\Registry $registry
-    ) {
+    public function __construct(Context $context) {
         $this->urlBuilder = $context->getUrlBuilder();
-        $this->registry = $registry;
         $this->context = $context;
     }
 
     /**
-     * Return the synonyms group Id.
+     * Return warehouseId.
      *
      * @return int|null
      */
     public function getId()
     {
-        $warehouse = $this->registry->registry('warehouse');
-        $warehouse = $this->context->getRequest()->getParam('id');
-        return $warehouse ? $warehouse : null;
+        $warehouseId = $this->context->getRequest()->getParam('id');
+        return $warehouseId ? $warehouseId : null;
     }
 
     /**

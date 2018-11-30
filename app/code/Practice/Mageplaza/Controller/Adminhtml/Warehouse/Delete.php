@@ -9,17 +9,18 @@ class Delete extends Index
     public function execute()
     {
         $id = $this->getRequest()->getParam('warehouse_id');
-
-        if (!($warehouse = $this->_objectManager->create(Warehouse::class)->load($id))) {
-            $this->messageManager->addError(__('Unable to proceed. Please, try again.'));
+        /** @var Warehouse $warehouse */
+        $warehouse = $this->warehouseRepository->getById($id);
+        if (!$warehouse) {
+            $this->messageManager->addErrorMessage(__('Unable to proceed. Please, try again.'));
             $resultRedirect = $this->resultRedirectFactory->create();
             return $resultRedirect->setPath('*/*/index', array('_current' => true));
         }
         try{
-            $warehouse->delete();
-            $this->messageManager->addSuccess(__('Your warehouse has been deleted !'));
+            $this->warehouseRepository->delete($warehouse);
+            $this->messageManager->addSuccessMessage(__('Your warehouse has been deleted !'));
         } catch (\Exception $e) {
-            $this->messageManager->addError(__('Error while trying to delete warehouse: '));
+            $this->messageManager->addErrorMessage(__('Error while trying to delete warehouse: '));
             $resultRedirect = $this->resultRedirectFactory->create();
             return $resultRedirect->setPath('*/*/index', array('_current' => true));
         }
