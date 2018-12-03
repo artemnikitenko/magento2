@@ -5,28 +5,16 @@ namespace Practice\Mageplaza\Model;
 use Practice\Mageplaza\Model\ResourceModel\Warehouse\CollectionFactory;
 use Magento\Ui\DataProvider\AbstractDataProvider;
 
-/**
- * Class DataProvider
- * @package Practice\Mageplaza\Model
- */
 class DataProvider extends AbstractDataProvider
 {
-    /**
-     * DataProvider constructor.
-     * @param $name
-     * @param $primaryFieldName
-     * @param $requestFieldName
-     * @param CollectionFactory $warehouseCollectionFactory
-     * @param array $meta
-     * @param array $data
-     */
+
     public function __construct(
         $name,
         $primaryFieldName,
         $requestFieldName,
-        CollectionFactory $warehouseCollectionFactory,
         array $meta = [],
-        array $data = []
+        array $data = [],
+        CollectionFactory $warehouseCollectionFactory
     )
     {
         $this->collection = $warehouseCollectionFactory->create();
